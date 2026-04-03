@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>리얼티뱅크 감정평가법인 경기남부지사 | 정문조 감정평가사</title>
+  <meta name="description" content="보상, 담보, 상속증여, 이축권 등 전문적인 감정평가 서비스를 제공합니다." />
+  <style>
+    :root {
+      /* 리얼티뱅크 로고의 블루 톤과 어울리면서도 고급스러운 네이비/골드 테마 유지 */
+      --navy: #004b8d; /* 명함 로고와 유사한 블루/네이비 톤으로 조정 */
+      --navy-2: #0066cc;
+      --gold: #d7b36a;
+      --gold-2: #f0ddb0;
+      --text: #1f2633;
+      --muted: #667085;
+      --line: #e5e9f2;
+      --bg: #f5f8ff;
+      --white: #ffffff;
+      --soft-blue: #eef4ff;
+      --soft-gold: #fff8ea;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow: 0 14px 34px rgba(0, 75, 141, 0.08);
+      --maxw: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      color: var(--text);
+      background: #fafbfc;
+      line-height: 1.6;
+      letter-spacing: -0.02em;
+    }
+
+    a { color: var(--navy-2); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(var(--maxw), calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 80px 0; }
+    
+    .section-head { margin-bottom: 40px; text-align: center; }
+    .section-eyebrow {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      background: rgba(215, 179, 106, 0.15); color: #9f7b31;
+      font-size: 13px; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.05em;
+    }
+    .section-title {
+      margin: 0 0 16px; font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.3; color: var(--navy); font-weight: 900; letter-spacing: -0.04em;
+    }
+    .section-desc { margin: 0 auto; color: var(--muted); font-size: 16px; max-width: 600px; word-break: keep-all; }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .site-header__inner {
+      width: min(var(--maxw), calc(100% - 40px)); margin: 0 auto;
+      height: 70px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { font-weight: 900; font-size: 20px; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+    .brand-sub { font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+    .nav { display: flex; gap: 24px; }
+    .nav a { font-size: 15px; font-weight: 700; color: var(--text); transition: color 0.2s; }
+    .nav a:hover { color: var(--navy-2); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 52px; padding: 0 24px; border-radius: 14px; font-size: 16px; font-weight: 800;
+      transition: 0.2s ease; cursor: pointer; text-align: center; border: none;
+    }
+    .btn-primary { background: var(--navy); color: #fff; box-shadow: 0 8px 20px rgba(0, 75, 141, 0.2); }
+    .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 8px 20px rgba(215, 179, 106, 0.3); }
+    .btn-kakao { background: #FEE500; color: #191919; box-shadow: 0 8px 20px rgba(254, 229, 0, 0.2); }
+
+    /* Hero Section */
+    .hero {
+      position: relative; padding: 100px 0 80px;
+      background: linear-gradient(135deg, #041b33 0%, #004b8d 100%); color: #fff; overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; right: -10%; top: -20%; width: 50vw; height: 50vw;
+      background: radial-gradient(circle, rgba(215, 179, 106, 0.15) 0%, transparent 70%); border-radius: 50%;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-title { font-size: clamp(32px, 6vw, 54px); font-weight: 900; line-height: 1.2; margin: 0 0 20px; letter-spacing: -0.04em; }
+    .hero-title em { font-style: normal; color: var(--gold-2); }
+    .hero-desc { font-size: clamp(16px, 3vw, 20px); color: rgba(255,255,255,0.8); margin: 0 0 36px; word-break: keep-all; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Stats Section */
+    .stats-wrap {
+      transform: translateY(-40px); position: relative; z-index: 10;
+      background: #fff; border-radius: var(--radius-xl); box-shadow: var(--shadow);
+      display: grid; grid-template-columns: repeat(3, 1fr); padding: 32px; border: 1px solid var(--line);
+    }
+    .stat-item { text-align: center; border-right: 1px solid var(--line); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { display: block; font-size: 32px; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
+    .stat-label { font-size: 14px; color: var(--muted); font-weight: 700; }
+
+    /* Services Section */
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .service-card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--navy-2); }
+    .service-icon {
+      width: 56px; height: 56px; background: var(--soft-blue); color: var(--navy); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;
+    }
+    .service-title { font-size: 22px; font-weight: 900; color: var(--navy); margin: 0 0 12px; }
+    .service-desc { color: var(--muted); margin: 0 0 20px; font-size: 15px; word-break: keep-all; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: var(--bg); color: var(--navy-2); padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 700; }
+
+    /* Process Section */
+    .process-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px; position: relative;
+      max-width: 800px; margin: 0 auto;
+    }
+    .process-step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; display: flex; align-items: center; gap: 20px; position: relative; z-index: 1; }
+    .step-num {
+      width: 48px; height: 48px; background: var(--navy); color: #fff; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;
+    }
+    .step-content { flex-grow: 1; text-align: left; }
+    .step-title { font-size: 18px; font-weight: 800; color: var(--text); margin: 0 0 6px; }
+    .step-desc { font-size: 14px; color: var(--muted); margin: 0; word-break: keep-all; }
+
+    /* Contact CTA */
+    .contact-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      border-radius: var(--radius-xl); padding: 50px; color: #fff; text-align: center;
+    }
+    .contact-banner h2 { font-size: 32px; font-weight: 900; margin: 0 0 16px; }
+    .contact-banner p { font-size: 18px; color: rgba(255,255,255,0.8); margin: 0 0 32px; }
+    .contact-info { display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .contact-block { display: flex; flex-direction: column; gap: 8px; }
+    .contact-label { font-size: 14px; font-weight: 700; color: var(--gold-2); text-transform: uppercase; letter-spacing: 0.05em; }
+    .contact-number { font-size: 32px; font-weight: 900; color: #fff; text-decoration: none; }
+
+    /* Footer */
+    .site-footer { background: #111827; color: #94a3b8; padding: 60px 0; font-size: 14px; line-height: 1.8; }
+    .footer-brand { font-size: 20px; color: #fff; font-weight: 900; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+    .footer-info p { margin: 0 0 6px; }
+    .footer-info strong { color: #cbd5e1; font-weight: 700; width: 60px; display: inline-block; }
+    .footer-bottom { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); color: #64748b; font-size: 13px; text-align: center; }
+
+    /* 모바일 하단 고정바 (기본 숨김) */
+    .mobile-bottom-bar { display: none; }
+
+    /* 📱 모바일 최적화 (768px 이하) */
+    @media (max-width: 768px) {
+      body { padding-bottom: 70px; } /* 하단바 영역 확보 */
+      .section { padding: 60px 0; }
+      
+      .site-header__inner { flex-direction: column; height: auto; padding: 16px 0; gap: 12px; }
+      .brand { font-size: 18px; }
+      .brand-sub { display: block; font-size: 13px; margin-top: 2px; margin-left: 0; }
+      .nav { 
+        width: 100%; overflow-x: auto; padding-bottom: 8px; justify-content: flex-start;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none;
+      }
+      .nav::-webkit-scrollbar { display: none; }
+
+      .hero { padding: 60px 0; text-align: center; }
+      .hero-content { display: flex; flex-direction: column; align-items: center; }
+      .hero-cta { justify-content: center; width: 100%; }
+      .hero-cta .btn { width: 100%; }
+
+      .stats-wrap { grid-template-columns: 1fr; gap: 24px; transform: translateY(-20px); padding: 24px; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+      .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      .contact-banner { padding: 40px 20px; }
+      .contact-banner h2 { font-size: 24px; }
+      .contact-number { font-size: 26px; }
+      .contact-info { gap: 24px; flex-direction: column; }
+
+      /* 모바일 전용 하단 고정 상담바 표시 */
+      .mobile-bottom-bar {
+        display: flex; position: fixed; bottom: 0; left: 0; width: 100%; height: 64px;
+        background: #fff; box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08); z-index: 999;
+      }
+      .mobile-bottom-bar a {
+        flex: 1; display: flex; align-items: center; justify-content: center;
+        font-size: 15px; font-weight: 800; text-decoration: none; gap: 6px;
+      }
+      .mobile-bottom-bar .call { background: var(--navy); color: #fff; }
+      .mobile-bottom-bar .kakao { background: #FEE500; color: #191919; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="brand">
+        REALTY BANK 리얼티뱅크
+        <span class="brand-sub">감정평가법인 경기남부지사</span>
+      </div>
+      <nav class="nav">
+        <a href="#about">법인소개</a>
+        <a href="#services">주요업무</a>
+        <a href="#process">업무절차</a>
+        <a href="#contact">상담문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            당신의 소중한 자산,<br />
+            <em>정확한 가치</em>를 찾습니다.
+          </h1>
+          <p class="hero-desc">
+            보상, 담보, 상속·증여부터 특수목적 평가까지.<br />
+            리얼티뱅크 감정평가법인 정문조 이사가 축적된 데이터와 전문성으로 의뢰인의 권리를 보호합니다.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="tel:01098892356">대표 감정평가사 연결</a>
+            <a class="btn btn-kakao" href="#">카톡 빠른 상담</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stats-wrap">
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">다년간의 전문 경력</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1,200+</span>
+          <span class="stat-label">누적 감정평가 실적</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">책임 평가 및 비밀보장</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Our Services</span>
+          <h2 class="section-title">주요 업무 영역</h2>
+          <p class="section-desc">부동산부터 무형자산까지, 각 분야에 특화된 정밀한 감정평가 서비스를 제공합니다.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🏗️</div>
+            <h3 class="service-title">보상 감정평가</h3>
+            <p class="service-desc">신도시, 도로, 공원 등 공익사업 편입에 따른 토지, 건물, 영업권 정당보상액 평가 및 이의신청 구제.</p>
+            <div class="service-tags">
+              <span class="tag">3기 신도시</span>
+              <span class="tag">재개발/재건축</span>
+              <span class="tag">영업손실</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏦</div>
+            <h3 class="service-title">담보 및 경매 평가</h3>
+            <p class="service-desc">금융기관 대출을 위한 정확한 담보가치 산정 및 법원 경매 진행 시 매각 기준이 되는 적정 시세 평가.</p>
+            <div class="service-tags">
+              <span class="tag">은행 담보대출</span>
+              <span class="tag">법원 경매</span>
+              <span class="tag">NPL</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">👨‍👩‍👧‍👦</div>
+            <h3 class="service-title">상속·증여 및 과세 평가</h3>
+            <p class="service-desc">국세청 신고 시 기준이 되는 적정 시가를 평가하여 합법적이고 합리적인 세부담 및 절세 방안 지원.</p>
+            <div class="service-tags">
+              <span class="tag">상속세 신고</span>
+              <span class="tag">가족간 거래</span>
+              <span class="tag">자산재평가</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">💼</div>
+            <h3 class="service-title">일반거래 및 특수 평가</h3>
+            <p class="service-desc">개발제한구역 내 이축권, 특허권, 영업권 등 무형자산 가치평가 및 기업 M&A 시 공정가치 산정.</p>
+            <div class="service-tags">
+              <span class="tag">이축권 평가</span>
+              <span class="tag">영업권/특허권</span>
+              <span class="tag">기업가치</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process" style="background: #fff;">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Work Process</span>
+          <h2 class="section-title">업무 진행 절차</h2>
+          <p class="section-desc">의뢰부터 평가서 발급까지 신속하고 투명하게 진행됩니다.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3 class="step-title">상담 및 의뢰</h3>
+              <p class="step-desc">목적물 현황 파악 및 평가 가능성, 수수료 등 기본 상담</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3 class="step-title">자료 조사</h3>
+              <p class="step-desc">공부 확인, 관련 법규 및 거래 사례 등 사전 데이터 분석</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3 class="step-title">현장 실사</h3>
+              <p class="step-desc">물건 소재지 현장 방문, 물리적 현황 및 이용 상태 확인</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3 class="step-title">평가 및 발급</h3>
+              <p class="step-desc">최종 가치 산정 후 감정평가서 작성 및 의뢰인 교부</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-banner">
+          <h2>가치 평가, 전문가와 상의하세요.</h2>
+          <p>복잡한 부동산 문제, 리얼티뱅크 감정평가법인이 명쾌한 해답을 드립니다.</p>
+          
+          <div class="contact-info">
+            <div class="contact-block">
+              <span class="contact-label">Mobile (Direct)</span>
+              <a href="tel:01098892356" class="contact-number">010-9889-2356</a>
+            </div>
+            <div class="contact-block">
+              <span class="contact-label">Office (사무실)</span>
+              <a href="tel:0312128895" class="contact-number">031-212-8895</a>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:01098892356" class="btn btn-primary" style="background:#fff; color:var(--navy);">전화 상담</a>
+            <a href="#" class="btn btn-kakao">카카오톡 문의</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">REALTY BANK 리얼티뱅크 감정평가법인 경기남부지사</div>
+      <div class="footer-info">
+        <p><strong>이 사</strong> 정문조 감정평가사</p>
+        <p><strong>주 소</strong> 경기도 용인시 수지구 동천로153번길 79, 2층 204호 (동천동, 동천파크자이상가동)</p>
+        <p><strong>T .</strong> 031-212-8895 &nbsp;|&nbsp; <strong>F .</strong> 031-212-8896</p>
+        <p><strong>M .</strong> 010-9889-2356 &nbsp;|&nbsp; <strong>E .</strong> realkorean@gmail.com</p>
+      </div>
+      <div class="footer-bottom">
+        © 2026 REALTY BANK APPRAISAL FIRM. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-bottom-bar">
+    <a href="tel:01098892356" class="call">📱 모바일 상담</a>
+    <a href="tel:0312128895" class="call" style="background:#003b70;">☎️ 사무실</a>
+    <a href="#" class="kakao" target="_blank">💬 카톡 문의</a>
+  </div>
+</body>
+</html>

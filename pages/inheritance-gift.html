@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>상속·증여 감정평가 안내 | 리얼티뱅크 감정평가법인 경기남부지사</title>
+  <meta name="description" content="상속세 및 증여세 절세, 국세청 소급감정 대응, 양도소득세 절세를 위한 시가 감정평가 안내 브로슈어" />
+  <style>
+    :root {
+      var(--navy): #004b8d;
+      --navy-2: #0066cc;
+      --gold: #d7b36a;
+      --gold-2: #f0ddb0;
+      --text: #1f2633;
+      --muted: #667085;
+      --line: #e5e9f2;
+      --bg: #f5f8ff;
+      --white: #ffffff;
+      --soft-blue: #eef4ff;
+      --soft-gold: #fff8ea;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow: 0 14px 34px rgba(0, 75, 141, 0.08);
+      --maxw: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      color: var(--text);
+      background: #fafbfc;
+      line-height: 1.6;
+      letter-spacing: -0.02em;
+    }
+
+    a { color: var(--navy-2); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(var(--maxw), calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 80px 0; }
+    
+    .section-head { margin-bottom: 40px; text-align: center; }
+    .section-eyebrow {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      background: rgba(215, 179, 106, 0.15); color: #9f7b31;
+      font-size: 13px; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.05em;
+    }
+    .section-title {
+      margin: 0 0 16px; font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.3; color: #004b8d; font-weight: 900; letter-spacing: -0.04em;
+    }
+    .section-desc { margin: 0 auto; color: var(--muted); font-size: 16px; max-width: 600px; word-break: keep-all; }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .site-header__inner {
+      width: min(var(--maxw), calc(100% - 40px)); margin: 0 auto;
+      height: 70px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { font-weight: 900; font-size: 20px; color: #004b8d; display: flex; align-items: center; gap: 8px; }
+    .brand-sub { font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+    .nav { display: flex; gap: 24px; }
+    .nav a { font-size: 15px; font-weight: 700; color: var(--text); transition: color 0.2s; }
+    .nav a:hover { color: var(--navy-2); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 52px; padding: 0 24px; border-radius: 14px; font-size: 16px; font-weight: 800;
+      transition: 0.2s ease; cursor: pointer; text-align: center; border: none;
+    }
+    .btn-primary { background: #004b8d; color: #fff; box-shadow: 0 8px 20px rgba(0, 75, 141, 0.2); }
+    .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 8px 20px rgba(215, 179, 106, 0.3); }
+    .btn-kakao { background: #FEE500; color: #191919; box-shadow: 0 8px 20px rgba(254, 229, 0, 0.2); }
+
+    /* Hero Section */
+    .hero {
+      position: relative; padding: 100px 0 80px;
+      background: linear-gradient(135deg, #041b33 0%, #004b8d 100%); color: #fff; overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; right: -10%; top: -20%; width: 50vw; height: 50vw;
+      background: radial-gradient(circle, rgba(215, 179, 106, 0.15) 0%, transparent 70%); border-radius: 50%;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px;
+      border-radius: 999px; background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16); font-size: 13px; font-weight: 900; margin-bottom: 18px;
+    }
+
+    .hero-title { font-size: clamp(32px, 6vw, 54px); font-weight: 900; line-height: 1.2; margin: 0 0 20px; letter-spacing: -0.04em; }
+    .hero-title em { font-style: normal; color: var(--gold-2); }
+    .hero-desc { font-size: clamp(16px, 3vw, 20px); color: rgba(255,255,255,0.8); margin: 0 0 24px; word-break: keep-all; }
+    
+    .hero__badges { list-style: none; padding: 0; margin: 0 0 36px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero__badges li {
+      padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16); font-size: 13px; font-weight: 800; color: #fff;
+    }
+
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Overview Section (Grid 4) */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); }
+    .overview-card__label { font-size: 13px; font-weight: 900; color: var(--navy-2); margin-bottom: 8px; }
+    .overview-card__value { font-size: 22px; line-height: 1.25; font-weight: 900; color: #004b8d; margin-bottom: 8px; letter-spacing: -0.03em; }
+    .overview-card__desc { margin: 0; color: var(--muted); font-size: 14px; word-break: keep-all; }
+
+    /* Message Banner */
+    .message-banner {
+      background: linear-gradient(135deg, #004b8d 0%, #00305e 100%);
+      border-radius: var(--radius-xl); padding: 40px; color: #fff; box-shadow: var(--shadow);
+    }
+    .message-banner h2 { margin: 0 0 14px; font-size: clamp(24px, 4vw, 32px); line-height: 1.3; letter-spacing: -0.04em; font-weight: 900; }
+    .message-banner p { margin: 0; font-size: 17px; color: rgba(255,255,255,0.88); line-height: 1.7; word-break: keep-all; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .data-table { width: 100%; min-width: 900px; border-collapse: collapse; }
+    .data-table th, .data-table td { padding: 18px 16px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; font-size: 15px; }
+    .data-table th { background: linear-gradient(180deg, #f6f8fc 0%, #eef4ff 100%); color: #004b8d; font-size: 14px; font-weight: 900; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .highlight-td { font-weight: 800; color: #d93838; }
+
+    /* Examples Section */
+    .example-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .example-card { position: relative; overflow: hidden; padding: 24px; border-radius: var(--radius-lg); background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .example-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: linear-gradient(90deg, var(--gold), var(--gold-2)); }
+    .example-meta { display: inline-block; padding: 8px 10px; border-radius: 999px; background: var(--soft-blue); color: var(--navy-2); font-size: 12px; font-weight: 900; }
+    .example-card__title { margin: 12px 0 14px; font-size: 20px; font-weight: 900; color: #004b8d; letter-spacing: -0.03em; line-height: 1.3;}
+    .metric { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 14px; }
+    .metric:last-child { border-bottom: 0; }
+    .metric b { color: #004b8d; font-weight: 800;}
+    .notice-box { margin-top: 20px; padding: 18px 20px; border-radius: 16px; background: var(--soft-blue); border: 1px solid #dbe7ff; color: #33415d; font-size: 14px; }
+
+    /* Flow Section */
+    .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; counter-reset: step; }
+    .flow-step { border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%); box-shadow: var(--shadow); padding: 22px 18px; min-height: 230px; }
+    .flow-step::before {
+      counter-increment: step; content: "0" counter(step); display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #004b8d 0%, #002d55 100%); color: #fff; font-weight: 900; margin-bottom: 14px;
+    }
+    .flow-step h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; color: #004b8d; }
+    .flow-step p { margin: 0; font-size: 14px; color: var(--muted); word-break: keep-all;}
+
+    /* Checklist & Process Section */
+    .checklist-wrap { display: grid; grid-template-columns: 1.12fr 0.88fr; gap: 20px; }
+    .checklist { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); }
+    .checklist ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
+    .checklist li {
+      position: relative; padding: 14px 14px 14px 48px; min-height: 72px; display: flex; align-items: center;
+      border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%); font-size: 14px; word-break: keep-all;
+    }
+    .checklist li::before {
+      content: "✓"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px;
+      border-radius: 6px; border: 2px solid var(--gold); background: linear-gradient(180deg, #fff8ea 0%, #fffdf7 100%);
+      display: flex; align-items: center; justify-content: center; color: #b08a3c; font-weight: 900; font-size: 12px;
+    }
+    .checklist-side { display: grid; gap: 16px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 16px; }
+    .faq-item { border: 1px solid rgba(0, 75, 141, 0.12); border-radius: 18px; background: #ffffff; box-shadow: var(--shadow); overflow: hidden; }
+    .faq-question { cursor: pointer; list-style: none; padding: 22px 24px; font-weight: 800; color: #004b8d; position: relative; }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: "+"; position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
+      font-size: 24px; line-height: 1; color: #b08a3c;
+    }
+    .faq-item[open] .faq-question::after { content: "−"; }
+    .faq-answer { padding: 0 24px 22px; color: var(--muted); line-height: 1.75; font-size: 15px; }
+    
+    /* Contact CTA */
+    .contact-banner {
+      background: linear-gradient(135deg, #004b8d 0%, #002d55 100%);
+      border-radius: var(--radius-xl); padding: 50px; color: #fff; text-align: center;
+    }
+    .contact-banner h2 { font-size: 32px; font-weight: 900; margin: 0 0 16px; }
+    .contact-banner p { font-size: 18px; color: rgba(255,255,255,0.8); margin: 0 0 32px; }
+    .contact-info { display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .contact-block { display: flex; flex-direction: column; gap: 8px; }
+    .contact-label { font-size: 14px; font-weight: 700; color: var(--gold-2); text-transform: uppercase; letter-spacing: 0.05em; }
+    .contact-number { font-size: 32px; font-weight: 900; color: #fff; text-decoration: none; }
+
+    /* Footer */
+    .site-footer { background: #111827; color: #94a3b8; padding: 60px 0; font-size: 14px; line-height: 1.8; }
+    .footer-brand { font-size: 20px; color: #fff; font-weight: 900; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+    .footer-info p { margin: 0 0 6px; }
+    .footer-info strong { color: #cbd5e1; font-weight: 700; width: 60px; display: inline-block; }
+    .footer-bottom { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); color: #64748b; font-size: 13px; text-align: center; }
+
+    /* 모바일 하단 고정바 */
+    .mobile-bottom-bar { display: none; }
+
+    /* 📱 모바일 최적화 (768px 이하) */
+    @media (max-width: 768px) {
+      body { padding-bottom: 70px; }
+      .section { padding: 60px 0; }
+      
+      .site-header__inner { flex-direction: column; height: auto; padding: 16px 0; gap: 12px; }
+      .brand { font-size: 18px; }
+      .brand-sub { display: block; font-size: 13px; margin-top: 2px; margin-left: 0; }
+      .nav { 
+        width: 100%; overflow-x: auto; padding-bottom: 8px; justify-content: flex-start;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none;
+      }
+      .nav::-webkit-scrollbar { display: none; }
+
+      .hero { padding: 60px 0; text-align: center; }
+      .hero-content { display: flex; flex-direction: column; align-items: center; }
+      .hero__badges { justify-content: center; }
+      .hero-cta { justify-content: center; width: 100%; }
+      .hero-cta .btn { width: 100%; }
+
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      @media (max-width: 480px) { .grid-4 { grid-template-columns: 1fr; } }
+      .example-grid { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .checklist-wrap { grid-template-columns: 1fr; }
+      .checklist ul { grid-template-columns: 1fr; }
+      .legal-grid { grid-template-columns: 1fr; }
+
+      .contact-banner { padding: 40px 20px; }
+      .contact-banner h2 { font-size: 24px; }
+      .contact-number { font-size: 26px; }
+      .contact-info { gap: 24px; flex-direction: column; }
+
+      .mobile-bottom-bar {
+        display: flex; position: fixed; bottom: 0; left: 0; width: 100%; height: 64px;
+        background: #fff; box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08); z-index: 999;
+      }
+      .mobile-bottom-bar a {
+        flex: 1; display: flex; align-items: center; justify-content: center;
+        font-size: 15px; font-weight: 800; text-decoration: none; gap: 6px;
+      }
+      .mobile-bottom-bar .call { background: #004b8d; color: #fff; }
+      .mobile-bottom-bar .kakao { background: #FEE500; color: #191919; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="brand">
+        REALTY BANK 리얼티뱅크
+        <span class="brand-sub">경기남부지사</span>
+      </div>
+      <nav class="nav">
+        <a href="#overview">평가개요</a>
+        <a href="#compare">시가주의 비교</a>
+        <a href="#examples">절세 시뮬레이션</a>
+        <a href="#process">업무절차</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero__badge">상속세 · 증여세 · 양도소득세 절세 전문</div>
+          <h1 class="hero-title">
+            상속·증여세 절세,<br />
+            <em>감정평가</em>가 정답입니다.
+          </h1>
+          <p class="hero-desc">
+            기준시가로 신고했다가 국세청 소급감정으로 세금 폭탄을 맞으시겠습니까?<br />
+            정확한 시가 평가를 통해 불확실성을 제거하고, 향후 양도소득세까지 고려한 최적의 절세 플랜을 제시합니다.
+          </p>
+
+          <ul class="hero__badges">
+            <li>국세청 소급감정 방어</li>
+            <li>꼬마빌딩/비주거용 전문</li>
+            <li>상속공제 한도 내 취득가액 UP</li>
+            <li>세무사 완벽 협업</li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="tel:01098892356">대표 감정평가사 연결</a>
+            <a class="btn btn-kakao" href="#">카톡 빠른 상담</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Overview</span>
+          <h2 class="section-title">상속·증여 감정평가가 필요한 이유</h2>
+          <p class="section-desc">아파트와 달리 시가 산정이 어려운 비주거용 부동산은 감정평가를 통한 선제적 대응이 필수입니다.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <div class="overview-card__label">대상 1</div>
+            <div class="overview-card__value">꼬마빌딩·상가</div>
+            <p class="overview-card__desc">국세청 감정평가 사업의 주요 타겟. 시가와 기준시가 차이가 커 소급감정 위험이 매우 높음.</p>
+          </article>
+          <article class="card">
+            <div class="overview-card__label">대상 2</div>
+            <div class="overview-card__value">나대지·단독주택</div>
+            <p class="overview-card__desc">유사 매매사례를 찾기 어려워 공시가격으로 신고하기 쉽지만, 향후 양도세 부담이 커지는 물건.</p>
+          </article>
+          <article class="card">
+            <div class="overview-card__label">목적 1</div>
+            <div class="overview-card__value">세무 리스크 제거</div>
+            <p class="overview-card__desc">납세자가 먼저 감정평가를 받아 신고하면, 과세관청의 임의적인 소급 감정평가 추징을 방어 가능.</p>
+          </article>
+          <article class="card">
+            <div class="overview-card__label">목적 2</div>
+            <div class="overview-card__value">취득가액 상승</div>
+            <p class="overview-card__desc">상속공제 한도액 이하라면, 감정평가로 합법적으로 가액을 높여 미래의 양도소득세를 획기적으로 절감.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="message">
+      <div class="container">
+        <div class="message-banner no-break">
+          <h2>"기준시가로 신고하면 유리한 거 아닌가요?"<br />과거의 상식은 이제 통하지 않습니다.</h2>
+          <p>
+            상속세 및 증여세법 제60조에 따라 재산 평가는 <strong>'시가(시장가치)'</strong>가 원칙입니다.<br />
+            최근 국세청은 기준시가와 시가 차이가 큰 비주거용 부동산(꼬마빌딩 등)에 대해 <strong>직접 예산을 들여 감정평가를 실시하고 세금을 추징</strong>하고 있습니다.<br />
+            전문 감정평가사를 통해 적법한 테두리 내에서 가장 유리한 가액을 선제적으로 평가받아 신고하는 것이 유일한 절세 및 방어 수단입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Comparison</span>
+          <h2 class="section-title">신고 방식별 리스크 및 장단점 비교</h2>
+        </div>
+
+        <div class="table-wrap no-break">
+          <table class="data-table" aria-label="신고 방식별 비교표">
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>기준시가(공시가격) 신고</th>
+                <th>납세자 자진 감정평가 신고 (추천)</th>
+                <th>과세관청 직접 소급감정 (추징)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>당장의 세부담</strong></td>
+                <td>가장 낮아 보임 (착시 현상)</td>
+                <td>적정 시가 반영 (세무사와 조율)</td>
+                <td><span class="highlight-td">가장 높음 (예상치 못한 세금 폭탄)</span></td>
+              </tr>
+              <tr>
+                <td><strong>세무 리스크</strong></td>
+                <td><span class="highlight-td">매우 높음 (추징 대상 1순위)</span></td>
+                <td>매우 낮음 (적법한 시가 인정)</td>
+                <td>- (가산세 부과 가능성 존재)</td>
+              </tr>
+              <tr>
+                <td><strong>미래 양도소득세</strong></td>
+                <td><span class="highlight-td">최고 세율 적용 (취득가액이 낮음)</span></td>
+                <td>대폭 절감 (취득가액 상향 인정)</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>주도권</strong></td>
+                <td>과세관청으로 넘어감</td>
+                <td>납세자가 절세 플랜을 주도</td>
+                <td>과세관청의 평가액을 수용해야 함</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="examples">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Simulation</span>
+          <h2 class="section-title">상속·증여 감정평가 절세 시뮬레이션</h2>
+          <p class="section-desc">
+            세무사와 감정평가사가 협업하여 납세자의 상황에 맞는 최적의 '가액'을 설계합니다.<br />
+            *아래 사례는 이해를 돕기 위한 예시이며 실제 세액은 다를 수 있습니다.
+          </p>
+        </div>
+
+        <div class="example-grid">
+          <article class="example-card no-break">
+            <span class="example-meta">Case 01. 면제 한도 내 상속</span>
+            <h3 class="example-card__title">상속공제 한도 미달 시<br />(미래 양도세 절세)</h3>
+            <p style="font-size: 14px; color: var(--muted); margin-bottom:16px;">배우자 포함 상속공제액 10억 원 적용 시나리오</p>
+            
+            <div class="metric"><span>부동산 기준시가</span><b>6억 원</b></div>
+            <div class="metric"><span>감정평가액</span><b>10억 원</b></div>
+            
+            <div class="metric" style="margin-top:10px;"><span>상속세 부담 (공통)</span><b>0원 (전액 공제)</b></div>
+            <div class="metric"><span>향후 15억 원에 매각 시 양도차익</span></div>
+            
+            <div class="compare-bars">
+              <div class="bar-row">
+                <span>기준시가 신고시</span>
+                <div class="bar-track"><div class="bar-fill" style="background:#d15b5b; width:100%;"></div></div>
+                <span>차익 9억</span>
+              </div>
+              <div class="bar-row">
+                <span>평가액 신고시</span>
+                <div class="bar-track"><div class="bar-fill" style="background:#1f5e98; width:55%;"></div></div>
+                <span>차익 5억</span>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: #d15b5b; margin-top: 12px; font-weight:700;">결과: 상속세는 동일하게 0원, 양도소득세 수억 원 절세!</p>
+          </article>
+
+          <article class="example-card no-break">
+            <span class="example-meta">Case 02. 꼬마빌딩 증여</span>
+            <h3 class="example-card__title">꼬마빌딩 증여 시<br />(소급감정 폭탄 방어)</h3>
+            <p style="font-size: 14px; color: var(--muted); margin-bottom:16px;">시세 50억 원 상당의 꼬마빌딩 증여 시나리오</p>
+            
+            <div class="metric"><span>부동산 기준시가</span><b>30억 원</b></div>
+            <div class="metric"><span>자진 감정평가액</span><b>40억 원</b></div>
+            
+            <div class="compare-bars" style="margin-top:20px;">
+              <div class="bar-row">
+                <span style="font-size:11px;">기준시가(30억) 신고 후<br>국세청 소급감정(50억)시</span>
+                <div class="bar-track"><div class="bar-fill" style="background:#d15b5b; width:100%;"></div></div>
+                <span style="font-size:12px; line-height:1.2;">증여세 폭탄<br>+ 가산세</span>
+              </div>
+              <div class="bar-row" style="margin-top: 10px;">
+                <span style="font-size:11px;">감정평가액(40억)<br>적법 신고시</span>
+                <div class="bar-track"><div class="bar-fill" style="background:#1f5e98; width:70%;"></div></div>
+                <span style="font-size:12px;">안전하게<br>과세 종결</span>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: #1f5e98; margin-top: 12px; font-weight:700;">결과: 무리한 기준시가 신고를 피하고, 적법한 범위 내 최저가액 평가로 세무조사 방어.</p>
+          </article>
+
+          <article class="example-card no-break">
+            <span class="example-meta">Case 03. 부담부 증여</span>
+            <h3 class="example-card__title">대출 낀 부담부 증여<br />(최적 비율 설계)</h3>
+            <p style="font-size: 14px; color: var(--muted); margin-bottom:16px;">전세금이나 대출을 포함하여 증여하는 시나리오</p>
+            
+            <ul style="font-size: 13px; color: var(--muted); padding-left: 20px; line-height: 1.8;">
+              <li><b>수증자(자녀):</b> 무상 이전 부분에 대한 증여세 납부</li>
+              <li><b>증여자(부모):</b> 채무액(유상 이전) 부분에 대한 양도세 납부</li>
+              <li><b>핵심:</b> 감정평가액 조절을 통해 '증여세율'과 '양도소득세율' 간의 한계세율 교차점을 찾아 전체 세부담을 최소화.</li>
+            </ul>
+            <p style="font-size: 13px; color: #1f5e98; margin-top: 12px; font-weight:700;">결과: 세무사와의 완벽한 공조를 통한 맞춤형 탁상감정으로 최적 절세액 산출.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Work Process</span>
+          <h2 class="section-title">감정평가 진행 5단계</h2>
+          <p class="section-desc">세무 대리인과 긴밀하게 소통하며, 납세자에게 가장 유리한 결과를 도출합니다.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3 class="step-title">기초 상담 및 서류 접수</h3>
+              <p class="step-desc">평가 목적(상속/증여) 및 물건지 지번, 담당 세무사 연락처 수령</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3 class="step-title">탁상감정 및 세무 시뮬레이션</h3>
+              <p class="step-desc">대략적인 예상 감정가를 산출하고 세무사와 양도세/증여세 최적점 협의</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-content">
+              <h3 class="step-title" style="color:#d7b36a;">※ 2개 법인 평가 (필요 시)</h3>
+              <p class="step-desc">기준시가 10억 초과 물건의 경우 당사 네트워크를 통해 타 법인 섭외 원스톱 진행</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3 class="step-title">현장 실사 및 본평가</h3>
+              <p class="step-desc">정식 의뢰 후 물건지 현장 조사 및 물리적/행정적 요건 정밀 분석</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3 class="step-title">감정평가서 발급</h3>
+              <p class="step-desc">의뢰인 및 담당 세무사에게 감정평가서 원본 및 PDF 전달</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Checklist</span>
+          <h2 class="section-title">평가 전 필수 체크리스트</h2>
+        </div>
+
+        <div class="checklist-wrap">
+          <div class="checklist no-break">
+            <ul>
+              <li>해당 부동산이 비주거용(꼬마빌딩, 상가, 나대지 등)인가?</li>
+              <li>기준시가와 실제 시세의 차이가 30% 이상 나는가?</li>
+              <li>상속의 경우, 공제한도(일괄 5억, 배우자 포함 10억 등) 이내인가?</li>
+              <li>신고 기한(상속 6개월, 증여 3개월)이 얼마나 남았는가?</li>
+              <li>기준시가 기준 가액이 10억 원을 초과하는가? (2개 평가기관 필요)</li>
+              <li>해당 부동산을 향후 단기간 내에 매각할 계획이 있는가?</li>
+              <li>평가수수료 대비 절세액(양도세 감소분 등)의 실익이 더 큰가?</li>
+              <li>현재 담당하고 있는 세무대리인(세무사)이 있는가?</li>
+            </ul>
+          </div>
+
+          <div class="checklist-side">
+            <div class="card card--gold no-break" style="background: linear-gradient(180deg, #fffdf8 0%, #fff8ea 100%); border:1px solid #f0dfb5;">
+              <h3 style="margin-top:0;color:#004b8d;">신고 및 평가 기한 체크</h3>
+              <p style="margin:0;color:var(--muted); font-size:14px; line-height: 1.7;">
+                <strong>상속세:</strong> 상속개시일이 속하는 달의 말일부터 <strong>6개월</strong> 이내<br>
+                <strong>증여세:</strong> 증여일이 속하는 달의 말일부터 <strong>3개월</strong> 이내<br>
+                *평가기준일(상속/증여일)을 전후하여 해당 기간 내에 감정평가가 완료되어야 적법한 시가로 인정받습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="section-title">자주 묻는 질문</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">세금을 줄이려면 감정가를 무조건 낮춰야 하는 것 아닌가요?</summary>
+            <div class="faq-answer">
+              <p>당장의 증여세/상속세만 보면 낮출수록 유리해 보입니다. 하지만 그 부동산을 나중에 팔 때 내야 하는 <strong>양도소득세</strong>를 생각하면 얘기가 달라집니다. 취득가액(감정가)이 너무 낮으면 향후 양도차익이 커져서 양도세 폭탄을 맞습니다. 따라서 세무사와 협의하여 가장 최적의 '골디락스' 지점을 찾아 평가하는 것이 감정평가사의 진짜 실력입니다.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">기준시가 10억 원 이상 물건은 감정평가법인 2곳에 맡겨야 하나요?</summary>
+            <div class="faq-answer">
+              <p>네, 세법상 기준시가 10억 원을 초과하는 부동산은 2개 이상의 감정평가기관의 평가액 평균을 시가로 산정해야 합니다. (단, 10억 이하인 경우 1개 기관도 가능). 의뢰인이 두 곳을 일일이 찾으실 필요 없이, 저희 법인에 의뢰해 주시면 신뢰할 수 있는 타 법인과 코웍(Co-work)하여 원스톱으로 처리해 드립니다.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">감정평가 수수료는 어떻게 산정되나요?</summary>
+            <div class="faq-answer">
+              <p>감정평가 수수료는 '감정평가 및 감정평가사에 관한 법률'에 따른 보수기준(국토교통부 고시)을 엄격히 준수합니다. 최종 산정된 감정평가액을 기준으로 요율이 적용되며, 탁상감정(예상가액 산출) 시 대략적인 수수료 견적을 함께 안내해 드립니다. <strong>상속·증여 평가 수수료는 상속/증여세 신고 시 500만 원 한도 내에서 공제 혜택</strong>을 받을 수 있습니다.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">기준시가보다 낮게 감정평가를 받을 수 있나요?</summary>
+            <div class="faq-answer">
+              <p>세법상 적법한 시가로 인정받기 위해서는 원칙적으로 보충적 평가액(개별공시지가, 기준시가 등)보다 낮게 평가할 수 없습니다. 기준시가 이하의 평가는 부실 평가로 국세청의 심사 대상이 될 수 있으므로 유의해야 합니다.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-banner">
+          <h2>절세의 첫 단추, 감정평가사와의 상담입니다.</h2>
+          <p>수많은 상속증여 평가 경험을 가진 리얼티뱅크 정문조 이사가 완벽한 솔루션을 제공합니다.</p>
+          
+          <div class="contact-info">
+            <div class="contact-block">
+              <span class="contact-label">Mobile (Direct)</span>
+              <a href="tel:01098892356" class="contact-number">010-9889-2356</a>
+            </div>
+            <div class="contact-block">
+              <span class="contact-label">Office (사무실)</span>
+              <a href="tel:0312128895" class="contact-number">031-212-8895</a>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:01098892356" class="btn btn-primary" style="background:#fff; color:#004b8d;">직통 전화 연결</a>
+            <a href="#" class="btn btn-kakao">카카오톡 문의</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">REALTY BANK 리얼티뱅크 감정평가법인 경기남부지사</div>
+      <div class="footer-info">
+        <p><strong>이 사</strong> 정문조 감정평가사</p>
+        <p><strong>주 소</strong> 경기도 용인시 수지구 동천로153번길 79, 2층 204호 (동천동, 동천파크자이상가동)</p>
+        <p><strong>T .</strong> 031-212-8895 &nbsp;|&nbsp; <strong>F .</strong> 031-212-8896</p>
+        <p><strong>M .</strong> 010-9889-2356 &nbsp;|&nbsp; <strong>E .</strong> realkorean@gmail.com</p>
+      </div>
+      <div class="footer-bottom">
+        © 2026 REALTY BANK APPRAISAL FIRM. All rights reserved.<br>
+        <span style="font-size: 12px; color:#475569;">※ 본 사이트의 내용은 세무 관련 일반 정보 제공 목적이며, 개별 사안에 대한 확정적 세무 자문을 대체하지 않습니다.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-bottom-bar">
+    <a href="tel:01098892356" class="call">📱 직통 상담</a>
+    <a href="tel:0312128895" class="call" style="background:#002d55;">☎️ 사무실</a>
+    <a href="#" class="kakao" target="_blank">💬 카톡 문의</a>
+  </div>
+
+  <script>
+    (function () {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item) => {
+        item.addEventListener('toggle', () => {
+          if (!item.open) return;
+          faqItems.forEach((other) => {
+            if (other !== item) other.open = false;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

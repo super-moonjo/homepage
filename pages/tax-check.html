@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>이축권 감정평가 절세효과 검토 | 리얼티뱅크 감정평가법인 경기남부지사</title>
+  <meta name="description" content="이축권 감정평가 절세효과를 검토할 수 있는 비교 페이지. 일괄 신고와 구분 신고를 비교하고, 원천징수형 및 종합과세 추정형 구조를 함께 살펴볼 수 있습니다." />
+  <style>
+    :root {
+      --navy:#081c39;
+      --navy2:#17457b;
+      --gold:#caa45b;
+      --gold2:#f2e0b7;
+      --ink:#1d2533;
+      --muted:#667085;
+      --line:#dce5f0;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --soft-blue:#eef4ff;
+      --soft-gold:#fff8ea;
+      --soft-green:#eefaf4;
+      --soft-red:#fff4f4;
+      --shadow:0 18px 44px rgba(8,28,57,.09);
+      --radius-xl:28px;
+      --radius-lg:20px;
+      --radius-md:14px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo",sans-serif;background:linear-gradient(180deg,#eef4ff 0%,#f7f9fc 22%,var(--bg) 100%);color:var(--ink);line-height:1.62;word-break:keep-all}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(var(--maxw),calc(100% - 28px));margin:0 auto;padding:20px 0 42px}
+    .hero{background:linear-gradient(135deg,#07192f 0%,#10335d 46%,#194f8f 100%);color:#fff;border-radius:30px;padding:24px 18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:999px;background:rgba(255,255,255,.08)}
+    .hero:before{width:220px;height:220px;right:-70px;top:-70px}
+    .hero:after{width:110px;height:110px;left:-20px;bottom:-20px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.10);font-size:12px;font-weight:900}
+    h1{position:relative;z-index:1;margin:14px 0 10px;font-size:clamp(30px,6vw,50px);line-height:1.12;letter-spacing:-.05em}
+    .hero p{position:relative;z-index:1;margin:0;color:rgba(255,255,255,.90);font-size:15px}
+    .hero-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1}
+    .hero-links a{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:12px;font-weight:800}
+    .section{margin-top:16px;background:var(--card);border:1px solid rgba(8,28,57,.06);border-radius:var(--radius-xl);box-shadow:0 14px 34px rgba(8,28,57,.05);padding:20px 16px}
+    .section-head{margin-bottom:16px}
+    .kicker{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;padding:7px 11px;border-radius:999px;background:var(--soft-blue);color:var(--navy2);font-size:12px;font-weight:900}
+    h2{margin:0;color:var(--navy);font-size:clamp(24px,4.4vw,36px);line-height:1.24;letter-spacing:-.04em}
+    .intro{margin:10px 0 0;color:var(--muted);font-size:14.5px}
+    .grid{display:grid;gap:12px}
+    .cards-2,.cards-3{display:grid;gap:12px}
+    .card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#fff 0%,#fbfdff 100%);padding:16px;position:relative;overflow:hidden}
+    .card:after{content:"";position:absolute;inset:auto -20px -24px auto;width:90px;height:90px;border-radius:50%;background:rgba(8,28,57,.04)}
+    .card h3{position:relative;z-index:1;margin:0 0 8px;color:var(--navy);font-size:18px;line-height:1.35}
+    .card p{position:relative;z-index:1;margin:0;color:var(--muted);font-size:14px}
+    .bullet{position:relative;z-index:1;list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+    .bullet li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:#334155}
+    .bullet li:before{content:"•";font-weight:900;color:var(--gold);margin-top:1px}
+    .note{border-radius:18px;padding:14px;border:1px solid;background:var(--soft-blue);border-color:#d8e5ff;color:#27426d;font-size:13.8px}
+    .note.gold{background:var(--soft-gold);border-color:#efddb3;color:#775419}
+    .note.green{background:var(--soft-green);border-color:#cfead8;color:#205b44}
+    .note.red{background:var(--soft-red);border-color:#f0d6d6;color:#7b3434}
+    .calc-shell{display:grid;gap:12px}
+    .calc-card{border:1px solid var(--line);border-radius:24px;background:#fff;padding:16px;box-shadow:0 10px 28px rgba(8,28,57,.05)}
+    .input-grid{display:grid;gap:12px}
+    .field label{display:block;margin-bottom:6px;font-size:12px;font-weight:900;color:var(--muted)}
+    .field input,.field select{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;padding:0 14px;background:#fff;color:var(--ink);font-size:15px}
+    .field small{display:block;margin-top:6px;color:var(--muted);font-size:11.5px;line-height:1.5}
+    .calc-mode{display:grid;gap:10px}
+    .mode-chip{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .mode-chip input{margin-top:3px}
+    .mode-chip strong{display:block;color:var(--navy);font-size:14px}
+    .mode-chip span{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+    .result-panel{display:grid;gap:10px}
+    .result-row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+    .result-row:last-child{border-bottom:0}
+    .result-row strong{display:block;color:var(--navy);font-size:14px}
+    .result-row span:first-child small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.45}
+    .amount{font-size:15px;font-weight:900;color:var(--ink);text-align:right}
+    .final{margin-top:2px;padding:14px;border-radius:18px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
+    .final .label{font-size:12px;font-weight:900;color:rgba(255,255,255,.78)}
+    .final .value{font-size:28px;font-weight:900;letter-spacing:-.04em;margin-top:4px}
+    .final .sub{font-size:12px;color:rgba(255,255,255,.78);margin-top:6px;line-height:1.5}
+    .metric-strip{padding:12px;border-radius:16px;background:var(--soft-blue);border:1px solid #d8e5ff;color:#26416c;font-size:13px;font-weight:700}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:#fff}
+    table{width:100%;min-width:760px;border-collapse:collapse}
+    th,td{padding:14px;border-bottom:1px solid var(--line);font-size:13.5px;text-align:left;vertical-align:top}
+    th{background:#f7faff;color:var(--navy);font-size:12.5px;font-weight:900}
+    tr:last-child td{border-bottom:0}
+    .footer-note{margin-top:12px;font-size:12px;color:var(--muted);text-align:center;line-height:1.65}
+    @media (min-width:760px){
+      .hero{padding:30px 26px}
+      .cards-2{grid-template-columns:repeat(2,1fr)}
+      .cards-3{grid-template-columns:repeat(3,1fr)}
+      .calc-shell{grid-template-columns:1.02fr .98fr}
+      .input-grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="eyebrow">이축권 감정평가 절세효과 검토 · 참고 계산 페이지</span>
+      <h1>이축권 감정평가 절세효과 검토</h1>
+      <p>
+        이 페이지는 이축권 감정평가를 검토할 때 일괄 신고와 구분 신고의 차이를 빠르게 비교해 보기 위한 참고용 계산 페이지입니다.
+        실무상 자주 언급되는 <b>원천징수형 8.8%</b>과 <b>종합과세 가능성</b>을 함께 살펴보실 수 있으며, 실제 신고는 양도세 구조, 보유기간, 취득가액, 장기보유특별공제, 타 소득 합산 여부, 사실관계 및 증빙에 따라 달라질 수 있습니다.
+      </p>
+      <div class="hero-links">
+        <a href="https://www.nts.go.kr/tax/sub/1.5.3.%ED%86%A0%EC%A7%80%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%AC%BC%EA%B3%BC%20%ED%95%A8%EB%AA%A8%20%EC%96%91%EB%8F%84%ED%95%98%EB%8A%94%20%EC%9D%B4%EC%B6%95%EA%B6%8C%EC%97%90%20%EB%8C%80%ED%95%9C%20%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8%20%EC%8B%A0%EA%B3%A0%C2%B7%EB%82%A9%EB%B6%80%20%EC%95%88%EB%82%B4.html" target="_blank" rel="noopener">국세청 안내</a>
+        <a href="https://www.law.go.kr/LSW//lsLawLinkInfo.do?lsJoLnkSeq=1000663020&lsId=003956&chrClsCd=010202&print=print" target="_blank" rel="noopener">소득세법 시행령 제87조</a>
+        <a href="https://casenote.kr/%EA%B5%AD%EC%84%B8%EC%B2%AD/%EC%82%AC%EC%A0%84-2023-%EB%B2%95%EA%B7%9C%EC%9E%AC%EC%82%B0-0725-6f70cb" target="_blank" rel="noopener">사전-2023-법규재산-0725</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker">핵심 원칙</span>
+        <h2>이축권 감정평가 검토 시 먼저 확인해야 할 원칙</h2>
+        <p class="intro">
+          이축권 감정평가 검토에서 가장 중요한 점은 감정평가만으로 절세가 자동 확정되는 것이 아니라는 점입니다.
+          권리 구분 가능성, 예정신고기한 준수, 객관적 증빙의 확보 여부를 함께 살펴야 하며, 아래 계산기는 이러한 검토를 돕기 위한 참고 도구입니다.
+        </p>
+      </div>
+      <div class="cards-3">
+        <article class="card">
+          <h3>1. 기한 엄수</h3>
+          <p>양도일이 속하는 달의 말일부터 2개월 이내 예정신고가 핵심입니다. 사후 감정평가도 이 기간 안에 제출·반영되는지가 실무상 중요합니다.</p>
+          <ul class="bullet">
+            <li>예정신고 기한 내 제출 여부 점검</li>
+            <li>사전-2023-법규재산-0725 해석례 확인</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>2. 산식의 성격 구분</h3>
+          <p>“일괄 양도세 추정”과 “구분 신고 시 세부담” 비교는 어디까지나 설명용 시뮬레이션입니다. 실제 세액 계산식 자체를 대체하지는 않습니다.</p>
+          <ul class="bullet">
+            <li>A안: 전체 금액에 체감 양도세율 적용</li>
+            <li>B안: 부동산 부분 + 이축권 부분 + 부대비용</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>3. 계약서만으로는 부족</h3>
+          <p>계약서에 이축권 금액을 따로 적는 것만으로 별도 과세가 자동 인정되는 것은 아닙니다. 구분 가능성을 뒷받침하는 객관적 자료가 필요합니다.</p>
+          <ul class="bullet">
+            <li>감정평가서 등 구분 증빙 필요</li>
+            <li>사실관계별 개별 검토 필수</li>
+          </ul>
+        </article>
+      </div>
+      <div class="note gold" style="margin-top:12px">
+        <b>핵심 안내:</b> 이축권 감정평가는 무조건적인 절세 수단이 아니라, 권리 구분 가능성과 세무구조를 보다 객관적으로 비교·검토하기 위한 절차로 이해하시는 것이 안전합니다.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker">절세효과 검증기</span>
+        <h2>일괄 신고와 구분 신고의 예상 부담 비교</h2>
+        <p class="intro">
+          A안은 총 매매가에 예상 양도세율을 적용해 전체를 일괄 신고하는 경우를 가정한 비교값입니다.
+          B안은 부동산 부분과 이축권 부분을 나누어 보며, 이축권 부분은 원천징수형과 종합과세 추정형 가운데 선택하여 검토할 수 있습니다.
+        </p>
+      </div>
+
+      <div class="calc-shell">
+        <div class="calc-card">
+          <div class="input-grid">
+            <div class="field">
+              <label for="p">총 매매가 (P)</label>
+              <input id="p" type="text" value="1,000,000,000" inputmode="numeric" />
+              <small>실제 계약금액 또는 예상 거래금액을 입력해 보실 수 있습니다.</small>
+            </div>
+            <div class="field">
+              <label for="r">이축권 감정가 (R)</label>
+              <input id="r" type="text" value="200,000,000" inputmode="numeric" />
+              <small>이축권 부분으로 구분 검토할 금액입니다.</small>
+            </div>
+            <div class="field">
+              <label for="rate">예상 양도세율 (%, 지방세 포함)</label>
+              <input id="rate" type="text" value="41.8" inputmode="decimal" />
+              <small>실제 법정세율이 아니라 사용자의 체감 추정세율입니다.</small>
+            </div>
+            <div class="field">
+              <label for="e">총 부대비용 (감평 + 세무 등 E)</label>
+              <input id="e" type="text" value="5,000,000" inputmode="numeric" />
+              <small>감정평가 수수료, 세무 검토비용 등 부대비용을 합산해 입력하실 수 있습니다.</small>
+            </div>
+            <div class="field">
+              <label for="other-rate">종합과세 추정 세율 (기타소득 과세표준 적용률)</label>
+              <input id="other-rate" type="text" value="22" inputmode="decimal" />
+              <small>종합과세 추정형 선택 시에만 사용됩니다. 원천징수 비교 시에는 자동으로 8.8%가 적용됩니다.</small>
+            </div>
+            <div class="field">
+              <label for="expense-rate">필요경비율 (이축권 기타소득)</label>
+              <input id="expense-rate" type="text" value="60" inputmode="decimal" />
+              <small>실무상 검토에 자주 활용되는 필요경비율을 기본값으로 설정했습니다.</small>
+            </div>
+          </div>
+
+          <div class="calc-mode" style="margin-top:14px">
+            <label class="mode-chip"><input type="radio" name="mode" value="withholding" checked /> <span><strong>원천징수형 간이 비교</strong><span>이축권 순소득 40% × 22% = 실효 약 8.8%로 계산</span></span></label>
+            <label class="mode-chip"><input type="radio" name="mode" value="comprehensive" /> <span><strong>종합과세 추정형 비교</strong><span>이축권 순소득 40%에 사용자가 입력한 종합과세 추정 세율을 적용</span></span></label>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <div class="result-panel">
+            <div class="metric-strip" id="mid-summary">이축권 순소득(과세기준 비교용): 0원 / 적용 방식: 원천징수형</div>
+            <div class="result-row">
+              <span>
+                <strong>A. 일괄 신고 시 예상 세부담</strong>
+                <small>총 매매가에 예상 양도세율을 적용한 비교 기준값</small>
+              </span>
+              <span class="amount" id="taxA">0원</span>
+            </div>
+            <div class="result-row">
+              <span>
+                <strong>B-1. 부동산 부분 양도세 추정</strong>
+                <small>(P - R) × 예상 양도세율</small>
+              </span>
+              <span class="amount" id="estateTax">0원</span>
+            </div>
+            <div class="result-row">
+              <span>
+                <strong>B-2. 이축권 부분 세부담 추정</strong>
+                <small>선택한 방식에 따라 자동 계산</small>
+              </span>
+              <span class="amount" id="otherTax">0원</span>
+            </div>
+            <div class="result-row">
+              <span>
+                <strong>B-3. 부대비용</strong>
+                <small>감정평가 수수료, 세무비용 등</small>
+              </span>
+              <span class="amount" id="costTax">0원</span>
+            </div>
+            <div class="result-row">
+              <span>
+                <strong>B. 구분 신고 시 총 세부담</strong>
+                <small>부동산 부분 + 이축권 부분 + 부대비용</small>
+              </span>
+              <span class="amount" id="taxB">0원</span>
+            </div>
+            <div class="final">
+              <div class="label">최종 예상 순편익 (A - B)</div>
+              <div class="value" id="diff">0원</div>
+              <div class="sub" id="final-text">비교 결과는 참고용입니다. 실제 신고 결과와 동일하지 않을 수 있으며, 개별 사실관계 검토가 필요합니다.</div>
+            </div>
+            <div class="note red" id="warning-box" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker">검토 구조 안내</span>
+        <h2>비교 계산 결과를 읽는 방법</h2>
+        <p class="intro">
+          비교 결과는 절세가 확정된다는 의미가 아니라, 어떤 방향으로 추가 검토가 필요한지를 파악하기 위한 참고값입니다.
+          이축권 부분의 순소득, 적용 방식, 부대비용이 함께 표시되므로 상담 전 기본적인 검토 포인트를 한눈에 확인하실 수 있습니다.
+        </p>
+      </div>
+      <div class="cards-2">
+        <article class="card">
+          <h3>이축권 부분 과세기준 확인</h3>
+          <p>필요경비 차감 후 남는 금액을 먼저 표시하여, 이축권 부분이 어떤 과세기준으로 비교되는지 보다 직관적으로 확인하실 수 있습니다.</p>
+        </article>
+        <article class="card">
+          <h3>입력값 검증 및 경고</h3>
+          <p>이축권 감정가가 총 매매가보다 크거나 입력값이 비현실적인 경우 경고 문구가 표시되어 기본 입력 오류를 줄일 수 있습니다.</p>
+        </article>
+      </div>
+      <div class="cards-2" style="margin-top:12px">
+        <article class="card">
+          <h3>상담 전에 함께 확인하시면 좋은 자료</h3>
+          <p>매매계약서, 보상 관련 통지서, 이축권 관련 행정자료, 기존 세무검토 의견, 취득가액 자료를 미리 준비해 두시면 보다 구체적인 검토가 가능합니다.</p>
+        </article>
+        <article class="card">
+          <h3>이런 경우 별도 상담이 필요합니다</h3>
+          <p>양도 이후 예정신고 기한이 임박한 경우, 이축권 금액을 별도로 기재했으나 증빙이 부족한 경우, 타 소득과의 합산 여부가 중요한 경우에는 개별 사실관계 검토가 필요합니다.</p>
+        </article>
+      </div>
+      <div class="table-wrap" style="margin-top:12px">
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>비교 기준</th>
+              <th>검토 방식</th>
+              <th>실무상 참고사항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A안</td>
+              <td>총 매매가 × 예상 양도세율</td>
+              <td>기준값으로 동일 적용</td>
+              <td>빠른 비교용 기준점 역할</td>
+            </tr>
+            <tr>
+              <td>B안 부동산</td>
+              <td>(총 매매가 - 이축권 감정가) × 예상 양도세율</td>
+              <td>기준값으로 동일 적용</td>
+              <td>부동산 본체 부분을 양도세 추정값으로 비교</td>
+            </tr>
+            <tr>
+              <td>B안 이축권</td>
+              <td>(R × 40%) × 22%</td>
+              <td>원천징수형 또는 종합과세 추정형 선택 적용</td>
+              <td>실무상 과세 방식 오해를 줄임</td>
+            </tr>
+            <tr>
+              <td>표시 방식</td>
+              <td>최종 결과 위주</td>
+              <td>중간값·경고·설명 제공</td>
+              <td>상담 전 자가 점검 기능 강화</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker">검토 및 판단 기준</span>
+        <h2>실무 검토 시 함께 살펴볼 체크 포인트</h2>
+      </div>
+      <div class="cards-3">
+        <article class="card">
+          <h3>예정신고 기한</h3>
+          <p>양도일이 속하는 달의 말일부터 2개월 이내 신고 여부가 중요합니다. 사후 감정평가가 허용 가능한지 역시 기한 관리가 핵심입니다.</p>
+        </article>
+        <article class="card">
+          <h3>기타소득 필요경비</h3>
+          <p>이축권 부분이 기타소득으로 검토되는 경우 필요경비율과 과세방식은 실제 사실관계와 관련 규정을 함께 봐야 하며, 단순 계산식만으로 결론을 내리면 안 됩니다.</p>
+        </article>
+        <article class="card">
+          <h3>계약 구조와 증빙</h3>
+          <p>계약서에 금액을 나눠 적는 것만으로는 부족할 수 있습니다. 권리의 독립성, 거래경위, 감정평가서, 허가 및 진행상황 등 객관 자료가 중요합니다.</p>
+        </article>
+      </div>
+      <div class="note green" style="margin-top:12px">
+        <b>중요:</b> 본 계산기는 절세 여부를 확정하는 도구가 아니라, 구분 검토의 필요성과 추가 상담 포인트를 확인하기 위한 1차 참고 도구입니다.
+      </div>
+      <div class="note gold" style="margin-top:12px">
+        <b>면책문구:</b> 본 시뮬레이션은 일반적인 산식을 기반으로 한 설명용 화면입니다. 실제 세액은 장기보유특별공제, 실제 취득가액, 타 소득 합산 여부, 과세 방식 판단, 사실관계 및 세무검토에 따라 크게 달라질 수 있으므로 반드시 세무 전문가와 개별 검토하시기 바랍니다.
+      </div>
+    </section>
+
+    <p class="footer-note">리얼티뱅크 감정평가법인 경기남부지사 · 정문조 감정평가사 · 상담전화 010-9889-2356 / 031-212-8895</p>
+  </main>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    const numberLikeIds = ['p', 'r', 'e'];
+    const decimalIds = ['rate', 'other-rate', 'expense-rate'];
+
+    function onlyNumber(value) {
+      return value.replace(/[^\d]/g, '');
+    }
+    function onlyDecimal(value) {
+      return value.replace(/[^\d.]/g, '').replace(/(\..*)\./g, '$1');
+    }
+    function addComma(value) {
+      if (value === '' || value == null) return '';
+      const num = String(value).replace(/,/g, '');
+      const parts = num.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return parts.join('.');
+    }
+    function parseNumber(value) {
+      return Number(String(value).replace(/,/g, '')) || 0;
+    }
+    function won(value) {
+      const rounded = Math.round(value || 0);
+      return addComma(String(rounded)) + '원';
+    }
+
+    numberLikeIds.forEach(id => {
+      $(id).addEventListener('input', e => {
+        const raw = onlyNumber(e.target.value);
+        e.target.value = raw ? addComma(raw) : '';
+        run();
+      });
+    });
+    decimalIds.forEach(id => {
+      $(id).addEventListener('input', e => {
+        e.target.value = onlyDecimal(e.target.value);
+        run();
+      });
+    });
+    document.querySelectorAll('input[name="mode"]').forEach(el => el.addEventListener('change', run));
+
+    function run() {
+      const p = parseNumber($('p').value);
+      const r = parseNumber($('r').value);
+      const rate = parseNumber($('rate').value) / 100;
+      const e = parseNumber($('e').value);
+      const otherRate = parseNumber($('other-rate').value) / 100;
+      const expenseRate = parseNumber($('expense-rate').value) / 100;
+      const mode = document.querySelector('input[name="mode"]:checked').value;
+
+      const netRatio = Math.max(0, 1 - expenseRate);
+      const otherIncomeBase = r * netRatio;
+      const taxA = p * rate;
+      const estateTax = Math.max(0, p - r) * rate;
+      const otherTax = mode === 'withholding'
+        ? otherIncomeBase * 0.22
+        : otherIncomeBase * otherRate;
+      const taxB = estateTax + otherTax + e;
+      const diff = taxA - taxB;
+
+      $('mid-summary').textContent = `이축권 순소득(과세기준 비교용): ${won(otherIncomeBase)} / 적용 방식: ${mode === 'withholding' ? '원천징수형(실효 약 8.8%)' : '종합과세 추정형'}`;
+      $('taxA').textContent = won(taxA);
+      $('estateTax').textContent = won(estateTax);
+      $('otherTax').textContent = won(otherTax);
+      $('costTax').textContent = won(e);
+      $('taxB').textContent = won(taxB);
+      $('diff').textContent = won(diff);
+      $('final-text').textContent = diff >= 0
+        ? '비교 결과상 구분 검토의 필요성이 확인됩니다. 다만 실제 신고 가능 여부와 세무판단은 개별 사실관계에 따라 달라집니다.'
+        : '비교 결과상 구분 검토가 항상 유리한 것은 아닐 수 있습니다. 감정평가 여부와 함께 전체 세무구조를 종합적으로 검토하시는 것이 좋습니다.';
+
+      const warnings = [];
+      if (r > p) warnings.push('이축권 감정가가 총 매매가보다 크게 입력되어 있습니다. 입력값 또는 구조를 다시 확인해 주세요.');
+      if (expenseRate >= 1) warnings.push('필요경비율이 100% 이상이면 비교가 왜곡됩니다. 일반 설명용 값인지 다시 확인해 주세요.');
+      if (rate > 1) warnings.push('예상 양도세율이 100%를 초과했습니다. 퍼센트 입력값을 확인해 주세요.');
+      if (p === 0) warnings.push('총 매매가가 0원으로 입력되어 있습니다.');
+      const warningBox = $('warning-box');
+      if (warnings.length) {
+        warningBox.style.display = 'block';
+        warningBox.innerHTML = '<b>입력 확인:</b> ' + warnings.join(' / ');
+      } else {
+        warningBox.style.display = 'none';
+        warningBox.textContent = '';
+      }
+    }
+
+    run();
+  </script>
+</body>
+</html>
